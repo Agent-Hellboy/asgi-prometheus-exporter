@@ -1,6 +1,6 @@
 # ASGI Prometheus Exporter
 
-A middleware for ASGI applications that exports Prometheus metrics. This middleware is compatible with any ASGI framework (Django, FastAPI, Starlette, etc.).
+A middleware for ASGI applications that exports Prometheus metrics. This middleware is compatible with any ASGI framework (Django, FastAPI, Starlette, etc.) and ASGI Servers.
 
 
 - Django (with Django ASGI)
