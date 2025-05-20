@@ -9,6 +9,7 @@ A middleware for ASGI applications that exports Prometheus metrics. This middlew
 [![PyPI - Version](https://img.shields.io/pypi/v/asgi-prometheus-exporter.svg)](https://pypi.org/project/asgi-prometheus-exporter/)
 
 
+```
 +---------------------+             +--------------------------+             +-----------------------+
 |                     |             |                          |             |                       |
 |    Web Server       | <-- HTTP -->|   Prometheus Middleware | <-- HTTP -->|  Application Server    |
@@ -22,6 +23,7 @@ A middleware for ASGI applications that exports Prometheus metrics. This middlew
                                         Collects Metrics
                                         Passes the request to the application
 
+```
 - Django (with Django ASGI)
 - FastAPI 
 - Starlette
