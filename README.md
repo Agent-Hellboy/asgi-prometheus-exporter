@@ -2,6 +2,25 @@
 
 A middleware for ASGI applications that exports Prometheus metrics. This middleware is compatible with any ASGI framework (Django, FastAPI, Starlette, etc.) and ASGI Servers.
 
+[![CI](https://github.com/agent-hellboy/asgi-prometheus-exporter/actions/workflows/ci.yml/badge.svg)](https://github.com/agent-hellboy/asgi-prometheus-exporter/actions/workflows/ci.yml)
+
+[![codecov](https://codecov.io/gh/Agent-Hellboy/asgi-prometheus-exporter/graph/badge.svg?token=NE7JS4FZHC)](https://codecov.io/gh/Agent-Hellboy/asgi-prometheus-exporter)
+
+[![PyPI - Version](https://img.shields.io/pypi/v/asgi-prometheus-exporter.svg)](https://pypi.org/project/asgi-prometheus-exporter/)
+
+
++---------------------+             +--------------------------+             +-----------------------+
+|                     |             |                          |             |                       |
+|    Web Server       | <-- HTTP -->|   Prometheus Middleware | <-- HTTP -->|  Application Server    |
+|    (Uvicorn)        |             |   (Metrics Collection)   |             |     (Django)          |
+|                     |             |                          |             |                       |
++---------------------+             +--------------------------+             +-----------------------+
+               |                               |                                    |
+               |                               |                                    |
+               |--------------------------- Request ------------------------------->|
+                                        Intercepts request
+                                        Collects Metrics
+                                        Passes the request to the application
 
 - Django (with Django ASGI)
 - FastAPI 
