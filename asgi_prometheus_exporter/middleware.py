@@ -109,8 +109,6 @@ class PrometheusMiddleware:
         # If the path contains path parameters (like /users/{user_id}),
         # we should normalize it to avoid cardinality issues
         if "{" in path:
-            # This is a simple approach - you might want to implement
-            # more sophisticated path parameter handling
             parts = path.split("/")
             normalized_parts = []
             for part in parts:
