@@ -1,12 +1,13 @@
 from prometheus_client import Counter, Gauge, Histogram
 
-# Define metrics
+# Total number of HTTP requests
 HTTP_REQUESTS_TOTAL = Counter(
     "asgi_http_requests_total",
     "Total number of HTTP requests",
     ["method", "path", "status_code"],
 )
 
+# HTTP request duration in seconds
 HTTP_REQUEST_DURATION_SECONDS = Histogram(
     "asgi_http_request_duration_seconds",
     "HTTP request duration in seconds",
@@ -29,12 +30,14 @@ HTTP_REQUEST_DURATION_SECONDS = Histogram(
     ),
 )
 
+# Number of HTTP requests in progress
 HTTP_REQUESTS_IN_PROGRESS = Gauge(
     "asgi_http_requests_in_progress",
     "Number of HTTP requests in progress",
     ["method", "path"],
 )
 
+# Total number of HTTP responses
 HTTP_RESPONSES_TOTAL = Counter(
     "asgi_http_responses_total",
     "Total number of HTTP responses",

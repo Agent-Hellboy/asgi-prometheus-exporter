@@ -1,5 +1,4 @@
 import time
-from typing import Dict, Optional
 
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
 from starlette.exceptions import HTTPException
@@ -19,7 +18,7 @@ class PrometheusMiddleware:
         self,
         app: ASGIApp,
         metrics_path: str = "/metrics",
-        custom_labels: Optional[Dict[str, str]] = None,
+        custom_labels: dict[str, str] | None = None,
     ) -> None:
         self.app = app
         self.metrics_path = metrics_path
